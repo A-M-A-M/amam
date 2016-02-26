@@ -48,7 +48,7 @@ class MySpider(CrawlSpider):
   name="Dailymail" #this is the name you must use to execute the script
   allowed_domains=["dailymail.co.uk"]
   start_urls=["http://www.dailymail.co.uk/home/search.html?sel=site&searchPhrase=refugee"]
-  filters_or=['']#regex refugee?
+  filters_or=['refugee','migrant']
   rules=(Rule(LinkExtractor(allow=filters_or),callback='parse_item'),)
   dateCreated = []
   message = []
